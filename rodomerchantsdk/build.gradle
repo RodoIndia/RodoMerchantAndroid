@@ -20,8 +20,6 @@ publish {
 android {
     compileSdkVersion 28
 
-
-
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 28
@@ -43,7 +41,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.github.nkzawa:socket.io-client:0.3.0'
+    implementation('com.github.nkzawa:socket.io-client:0.3.0',{
+        exclude group:'org.json',module: 'json'
+    })
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
 }
