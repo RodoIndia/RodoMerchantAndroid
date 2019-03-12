@@ -5,7 +5,7 @@ publish {
 
     def groupProjectID = 'com.rodo'
     def artifactProjectID = 'RodoMerchantAndroid'
-    def publishVersionID = '0.1.1'
+    def publishVersionID = '0.1.2'
 
     userOrg = 'rodo'
     repoName = 'RodoLock'
@@ -32,7 +32,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
