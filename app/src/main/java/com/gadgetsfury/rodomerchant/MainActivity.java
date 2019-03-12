@@ -61,14 +61,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //get locations of all your locks
+        //1st param -> LatLng
+        //2nd param -> radius in meter
+        //3rd param -> Lock Type
+        //4th -> callback with RodoLock
         rodo.getLocations(new LatLng(23.547368,87.289595),4000, LockStatus.ALL, new LocationCallbackListener() {
             @Override
-            public void onLocationReceived(RodoLock list) {
-                Log.e(TAG, "onLocationsReceived: " + list.toString());
+            public void onLocationReceived(RodoLock rodoLock) {
+                Log.e(TAG, "onLocationsReceived: " + rodoLock.toString());
             }
         });
 
         //get location of a single lock
+        //1st param -> imei of lock
+        //2nd param -> callback with RodoLock object
         rodo.getLocation("12345", new LocationCallbackListener() {
             @Override
             public void onLocationReceived(RodoLock rodoLock) {

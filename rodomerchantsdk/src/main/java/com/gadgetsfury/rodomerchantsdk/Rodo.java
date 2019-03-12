@@ -26,7 +26,7 @@ import retrofit2.Response;
 public class Rodo {
 
     private final String TAG = this.getClass().getSimpleName();
-    private final static String SERVER = "http://13.127.229.242:4200";
+    private final static String SERVER = "http://merchant.rodoindia.com:4200";
 
     private String merchantKey;
     private String secretKey;

@@ -12,7 +12,7 @@ public class APIClient {
 
     private static String TAG = APIClient.class.getSimpleName();
 
-    private static final String BASE_URL = "http://merchant.rodobikes.com:4300/v0/";
+    private static final String BASE_URL = "http://merchant.rodoindia.com:4300/v0/";
 
     private static Retrofit retrofit = null;
 
